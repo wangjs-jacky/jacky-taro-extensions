@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test:unit": "vitest run",
+    "test:force": "vitest run -u"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.2"
+  }
+}

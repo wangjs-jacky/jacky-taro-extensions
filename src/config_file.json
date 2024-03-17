@@ -1,0 +1,30 @@
+{
+    "supportExts": [".ts", ".tsx", ".js", ".jsx", ".scss", ".css"],
+    "supportPlatForm": {
+        ".h5": {
+            "label": "H5"
+        },
+        ".crn": {
+            "label": "crn"
+        }
+    },
+    "supportSrcs": [
+        {
+            "path": "./src",
+            "ignore": ""
+        }
+    ],
+    "supportDirs": [
+        {
+            "path": "./dist-crn/xtaro-tnt-trip/src/taro",
+            "prefix": ".crn",
+            "ignore": ""
+        },
+        {
+            "path": "./dist-nfes/src",
+            "prefix": ".h5",
+            "ignore": ""
+        }
+    ],
+    "alwaysShowMessage": true
+}

@@ -1,0 +1,95 @@
+{
+  "name": "jacky-taro-extensions",
+  "displayName": "jacky-taro-extensions",
+  "description": "hello ",
+  "version": "0.0.1",
+  "publisher": "jacky",
+  "author": "所无聊 <2409277719@qq.com>",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "./vector-difference-ab.png",
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "productIconThemes": [
+      {
+        "id": "aliensAreBack",
+        "label": "Aliens Are Back",
+        "path": "./producticons/aliens-product-icon-theme.json"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jacky-taro-extensions.diff",
+        "key": "cmd+d"
+      },
+      {
+        "command": "jacky-taro-extensions.jump",
+        "key": "cmd+j"
+      }
+    ],
+    "commands": [
+      {
+        "command": "jacky-taro-extensions.diff",
+        "title": "xtaro: diff cross-platfrom files",
+        "alt": "对比多端代码",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "jacky-taro-extensions.jump",
+        "title": "xtaro: quick jump",
+        "alt": "快速跳转文件",
+        "icon": "$(output-view-icon)"
+      },
+      {
+        "command": "jacky-taro-extensions.eject_config",
+        "title": "xtaro: eject extensions config",
+        "alt": "生成配置文件",
+        "icon": "$(output-view-icon)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "jacky-taro-extensions.diff",
+          "group": "navigation@1",
+          "when": "showJumpIcon"
+        },
+        {
+          "command": "jacky-taro-extensions.jump",
+          "group": "navigation@2",
+          "when": "showJumpIcon"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.6",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.2"
+  },
+  "dependencies": {
+    "micromatch": "^4.0.5"
+  }
+}
